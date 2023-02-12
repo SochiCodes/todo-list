@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 
 
+
 function App() {
   const [list, setList] = useState([])
   const [input, setInput] = useState("")
@@ -27,23 +28,25 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>A Todo List</h1>
-      <input 
-      type="text" 
-      value={input}
-      onChange = {(e) => setInput(e.target.value)}
-      />
-      <button onClick={() => addTodo(input)}>Add</button>
+    <div className="container">
+      <div className="wrapper">
+        <h1>What do you want to do?</h1>
+        <input 
+          type="text" 
+          value={input}
+          onChange = {(e) => setInput(e.target.value)}
+          />
+          <button className="submit" onClick={() => addTodo(input)}>Add</button>
 
-      <ul>
-        {list.map((todo) => (
-          <li key={todo.id}>
-            {todo.todo}
-            <button onClick={() => deleteTodo(todo.id)}>X</button>
-          </li>
-        ))}
-      </ul>
+        <ul>
+          {list.map((todo) => (
+            <li key={todo.id}>
+              {todo.todo}
+              <button onClick={() => deleteTodo(todo.id)}>X</button>
+            </li>
+          ))}
+        </ul>
+        </div>
     </div>
   );
 }
