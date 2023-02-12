@@ -17,7 +17,7 @@
   text-align:center;
 }
 
-.wrapper h1{
+.wrapper h5{
   color: white;
   font-size: 36px;
   font-weight: 100;
@@ -50,24 +50,29 @@
   border: none;
 }
 .wrapper ul {
+  width: 370px;
   display: flex;
+  gap: 30px;
   flex-direction: column;
-  gap: 20px;
   list-style-type: none;
   color: white;
+  padding: 0;
 }
-/*
-.container form{
-  width: 500px;
-  margin: 0 auto;
+.wrapper ul li{
   display: flex;
-  background-color: red;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 50px;
 }
-.container form button{
-  padding: 20px 15px;
-  width: 200px;
+.wrapper ul li button{
+  background-color: transparent;
+  border-radius: 50%/50%;
+  font-weight: bold;
+  border-color: #252830;
+  color: #252830;
 }
-.container form input{
-  width: 100%;
-  padding: 20px;
-} */
+.wrapper ul li button:hover{
+  background-color: transparent;
+  border-color: red;
+  color: red;
+}

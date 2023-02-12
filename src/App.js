@@ -13,6 +13,9 @@ function App() {
       todo: todo,
     };
   //add the todo to the list
+  if (input === ""){
+    return
+  }
   setList([...list, newTodo]);
 
   //clear input box
@@ -30,13 +33,13 @@ function App() {
   return (
     <div className="container">
       <div className="wrapper">
-        <h1>What do you want to do?</h1>
+        <h5>What do you want to do?</h5>
         <input 
           type="text" 
           value={input}
           onChange = {(e) => setInput(e.target.value)}
           />
-          <button className="submit" onClick={() => addTodo(input)}>Add</button>
+          <button className="submit" onClick={() => addTodo(input)}>+</button>
 
         <ul>
           {list.map((todo) => (
